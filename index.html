@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TP1 METEO HTML</title>
+
+		<script type="text/javascript">
+			
+			
+		    function showCity(vs){
+		        let villeCourante = "LYON";
+		        console.log(villeCourante);
+		        
+		        var vs = document.getElementById(vs);
+	
+		        
+					if (vs.value == "Lyon") { 
+						Lyon.style.display= "";
+						Paris.style.display= "none"; 
+						Bejaia.style.display= "none";  
+
+					}
+					if (vs.value == "Paris") { 
+					    Lyon.style.display= "none";
+					    Paris.style.display= ""; 
+					    Bejaia.style.display= "none"; 
+					}
+					if (vs.value == "Bejaia") { 
+					    Lyon.style.display= "none";
+					    Paris.style.display= "none"; 
+					    Bejaia.style.display= ""; 
+					}
+				
+					
+				
+			}
+		</script> 
+        <style>
+        
+        h2 {
+            color: rgb(0, 232, 15);
+        }  
+        
+        #PARIS {
+            background-color: yellow;
+        }
+		#LYON {
+            background-color: yellow;
+        }
+
+		#BEJAIA {
+            background-color: yellow;
+        }
+        
+        p {
+            color: rgb(191, 0, 255);
+        }
+
+		#AUTEUR {
+            background-color: yellow;
+			color: blue;
+        }
+
+		.VILLES{
+            display: flex;
+			flex-warp: warp;
+		
+        }
+
+		.VILLES div {
+			width: 9000px;
+            border: solid 1px #000 ;
+        }
+        
+
+       
+        
+        </style>
+    </head>
+    <body>
+
+    <h1><center>TP METEO HTML </center></h1>
+
+	<label for="ville-select">choix ville:</label>
+
+	<select id="vs" onchange="showCity(this.id)">
+			<option value="">--choisissez une ville--</option>
+			<option value="Lyon">Lyon</option>
+			<option value="Paris">Paris</option>
+			<option value="Bejaia">Bejaia</option>
+		</select>
+
+	
+	
+	<div class="VILLES">
+
+    <div id= "Lyon" >
+    <h2 id="LYON">LYON</h2>
+    <p> 10 degres, pluvieux</p>
+	<img src="noun_snow cloud_737641 (1).png" alt="Icone meteo pluvieux"  width="100">
+    </div>
+
+
+	<div id="Paris" >
+    <h2 id ="PARIS">PARIS</h2>
+    <p> 7 degres, orageux</p>
+	<img src="noun_Rain and Lightning Cloud_653884.png" alt="Icone meteo orageux" width="100">
+	</div>
+
+
+	<div id="Bejaia" >
+	<h2 id ="BEJAIA">BEJAIA</h2>
+    <p> 22 degres, ensoleille</p>
+	<img src="noun_sun_653889.png" alt ="Icone meteo ensoeille"  width="100">
+    </div>
+
+	</div>
+
+
+    <p id = "AUTEUR">Auteur: Khalef Aguelmin p1712721<br>Icones meteo par <a href="https://thenounproject.com/search/collection/?q=weather">Nook Fulloption</a>.</p>
+    
+    
+    </body>
+</html>
